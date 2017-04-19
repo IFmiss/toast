@@ -19,9 +19,9 @@
 		    	animateStyle:  		  "fadeInUp",				//进入的动画
 				padding:              "10px 20px",              //padding
 				background:           "rgba(7,17,27,0.66)",     //背景色
-				borderRadius:         "6px",                    	//圆角
+				borderRadius:         "6px",                    //圆角
 				duration:             3000,                     //定时器时间
-				fontSize:             "14px",                   //字体大小
+				fontSize:             14,                   	//字体大小
 				content:              "这是一个提示信息",       //提示内容
 				color:                "#fff",                   //文字颜色
 				top:            	  "80%",                	//bottom底部的位置    具体的数值 或者center  垂直居中
