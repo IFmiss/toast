@@ -38,5 +38,8 @@ $('div_toast').toast({
 showMessage: 四个参数 content:内容,duration:时长,isCenter:是否剧中,animateStyle:动画效果
 $dw.showMessage('未曾遗忘的青春',3000,true,fadeInUp);
 
+<pre>
+$dw.showMessage('这是提示信息',5000,false,'fadeIn');
+</pre>
 
 演示地址 http://www.ifmisswqq.com/works/Others/toast/
