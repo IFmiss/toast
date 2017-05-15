@@ -1,0 +1,122 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+@charset "utf-8";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/typography/links/link-colors";
+
+.cpt_toast{
+	position: fixed;
+	left:50%;
+	top:50%;
+	text-align: center;
+    animation-duration: 0.3s;
+	@include inline-block;                   
+	@include transition(all 0.3s ease);
+	transform: translate(-50%,-50%);
+	transform: translate3d(-50%,-50%,0);
+	font-family: '微软雅黑','Microsoft Yahei';
+}
+
+
+//***************************************fadeInNoTransform
+@-webkit-keyframes fadeInNoTransform{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+@keyframes fadeInNoTransform{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+.fadeInNoTransform{-webkit-animation-name:fadeInNoTransform;animation-name:fadeInNoTransform}
+
+//***************************************fadeOutNoTransform
+@-webkit-keyframes fadeOutNoTransform{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+
+@keyframes fadeOutNoTransform{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+
+.fadeOutNoTransform{-webkit-animation-name:fadeOutNoTransform;animation-name:fadeOutNoTransform}
+
+
+//***************************************fadeIn
+@-webkit-keyframes fadeIn{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+@keyframes fadeIn{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+.fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn}
+
+//***************************************fadeOut
+@-webkit-keyframes fadeOut{
+	0%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	100%{opacity:0;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+@keyframes fadeOut{
+	0%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	100%{opacity:0;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+.fadeOut{-webkit-animation-name:fadeOut;animation-name:fadeOut}
+
+
+//***************************************fadeInUp
+
+@-webkit-keyframes fadeInUp{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,20px,0);transform:translate3d(-50%,20px,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+@keyframes fadeInUp{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,20px,0);-ms-transform:translate3d(-50%,20px,0);transform:translate3d(-50%,20px,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}
+
+//***************************************fadeOutDown
+
+@-webkit-keyframes fadeOutDown{
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	0%{opacity:0;-webkit-transform:translate3d(-50%,20px,0);transform:translate3d(-50%,20px,0)}
+}
+
+@keyframes fadeOutDown{
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	0%{opacity:0;-webkit-transform:translate3d(-50%,20px,0);-ms-transform:translate3d(-50%,20px,0);transform:translate3d(-50%,20px,0)}
+}
+
+.fadeOutDown{-webkit-animation-name:fadeOutDown;animation-name:fadeOutDown}
+
+
+
+//***************************************fadeInDown
+@-webkit-keyframes fadeInDown{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,-40px,0);transform:translate3d(-50%,-40px,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+@keyframes fadeInDown{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,-40px,0);-ms-transform:translate3d(-50%,-40px,0);transform:translate3d(-50%,-40px,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+.fadeInDown{-webkit-animation-name:fadeInDown;animation-name:fadeInDown}

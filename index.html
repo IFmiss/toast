@@ -5,29 +5,32 @@
 	<title>滚动菜单兼容PC 移动端</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
 	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/showMessage.css">
+	<link rel="stylesheet" href="css/toast.css">
 </head>
 <body style="margin: 0;width: 100%;min-height: 100%">
-	<div style="width: 100%;height: auto;margin-top: 50px">
-		<div onclick="showtoastFromDiv()" style="display: inline-block;background: #65D08E;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 20px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在元素中部分显示toast</div>
-		<div onclick="showtoastFromDivbottom()" style="display: inline-block;background: #60DDE4;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 20px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在元素底部分显示toast</div>
+	<div style="width: 100%;height: auto;margin-top: 30px">
+		<div onclick="showtoastFromDiv()" style="display: inline-block;background: #65D08E;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 10px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在元素垂直显示toast</div>
 
-		<div onclick="showtoastFromDocument()" style="display: inline-block;background: #DC93F4;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 20px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在body中底部提示</div>
-		<div onclick="showtoastFromDocumentCenter()" style="display: inline-block;background: #F387A1;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 20px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在body中中部提示</div>
-		<div onclick="toastbackground()" style="display: inline-block;background: #EFBF66;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 20px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">其他背景色toast</div>
+		<div onclick="showtoastFromDivbottom()" style="display: inline-block;background: #60DDE4;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 10px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在元素底部分显示toast</div>
+
+		<div onclick="showtoastFromDocument()" style="display: inline-block;background: #DC93F4;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 10px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在body中底部提示</div>
+
+		<div onclick="showtoastFromDocumentCenter()" style="display: inline-block;background: #F387A1;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 10px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在body中中部提示</div>
+
+		<div onclick="toastbackground()" style="display: inline-block;background: #EFBF66;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 10px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">其他背景色toast</div>
 	</div>
 
 
-	<div class="toast_div" style="width:600px;height:400px;border:1px solid #5BE4B6;margin-top: 200px;margin-left: 200px"></div>
+	<div class="toast_div" style="width:50%;height:200px;border:1px solid #aaa;margin-top: 20px;margin-left: 30px"></div>
 </body>
 
 <script src="js/jquery.js"></script>
-<script src="js/showMessage.js"></script>
+<script src="js/toast.js"></script>
 <script>
 	function showtoastFromDiv(){
 		$('.toast_div').toast({
 			content:'这是默认的提示信息',
-			duration:1000000
+			duration:1000
 		});
 	}
 
@@ -40,84 +43,22 @@
 	}
 
 	function showtoastFromDocument(){
-		$dw.showMessage('这是提示消息哈！');
+		showMessage('这是提示消息哈！');
 	}
 
 	function showtoastFromDocumentCenter(){
-		$dw.showMessage('这是提示消息哈！',3000,true);
+		showMessage('这是提示消息哈！',3000,true);
 	}
 
 	function toastbackground() {
 		$('body').toast({
+			position:'fixed',
 			content:'这是默认的提示信息',
 			duration:3000,
 			isCenter:false,
 			background:'rgba(230,0,0,0.5)'
 		});
 	}
- 
-	// function showList1(){
-	// 	$dw.scrollMenu({
-	// 		type:'',
-	// 		// bscroll:true,
-	// 		// animateIn:'bounceIn',
-	// 		// animateOut:'bounceOut',
-	// 		click:function(ret){
-	// 			if(ret.hasHref){
-	// 				return
-	// 			}else{
-	// 				// switch (ret.index){
-	// 				// 	case 0:
-	// 				// 	alert(0);
-	// 				// 	break;
-	// 				// }
-	// 				alert(JSON.stringify(ret));
-	// 			}
-	// 		}
-	// 	});
-	// }
 
-	// function showListbscroll(){
-	// 	$dw.scrollMenu({
-	// 		// type:'',
-	// 		bscroll:true,
-	// 		// animateIn:'bounceIn',
-	// 		// animateOut:'bounceOut',
-	// 		click:function(ret){
-	// 			if(ret.hasHref){
-	// 				return
-	// 			}else{
-	// 				// switch (ret.index){
-	// 				// 	case 0:
-	// 				// 	alert(0);
-	// 				// 	break;
-	// 				// }
-	// 				alert(JSON.stringify(ret));
-	// 			}
-	// 		}
-	// 	});
-	// }
-
-	// function showListnoborder(){
-	// 	$dw.scrollMenu({
-	// 		type:'cross',
-	// 		hasLineBorder:false,
-	// 		// bscroll:true,
-	// 		// animateIn:'bounceIn',
-	// 		// animateOut:'bounceOut',
-	// 		click:function(ret){
-	// 			if(ret.hasHref){
-	// 				return
-	// 			}else{
-	// 				// switch (ret.index){
-	// 				// 	case 0:
-	// 				// 	alert(0);
-	// 				// 	break;
-	// 				// }
-	// 				alert(JSON.stringify(ret));
-	// 			}
-	// 		}
-	// 	});
-	// }
 </script>
 </html>
