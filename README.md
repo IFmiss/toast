@@ -42,4 +42,4 @@ showMessage('未曾遗忘的青春',3000,true,fadeInUp);
 showMessage('这是提示信息',5000,false,'fadeIn');
 </pre>
 
-演示地址 http://www.daiwei.org/works/components/toast/
+演示地址  http://daiwei.org/components/toast/
