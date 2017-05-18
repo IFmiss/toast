@@ -3,12 +3,12 @@
 
 	//显示提示信息    toast
 	$.fn.toast = function(options){
+		var $this = $(this);
+		var _this = this;
 		return this.each(function(){
 			$(this).css({
 				position:'relative'
 			});
-			var $this = $(this);
-			var _this = this;
 			var top = '';		//bottom的位置
 			var translateInfo = ''; 	//居中和不居中时的tarnslate
 
