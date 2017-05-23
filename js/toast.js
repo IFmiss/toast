@@ -1,5 +1,26 @@
 'use strict';
 (function($,window){ 
+	//动态加载animate
+	var loadStyles = function(url) {
+		var hasSameStyle = false;
+		var links = $('link');
+		for(var i = 0;i<links.length;i++){
+			if(links.eq(i).attr('href') == url){
+				hasSameStyle = true;
+				return
+			}
+		}
+
+		if(!hasSameStyle){
+			var link = document.createElement("link");
+			link.type = "text/css";
+			link.rel = "stylesheet";
+			link.href = url;
+			document.getElementsByTagName("head")[0].appendChild(link);
+		}
+    }
+
+    loadStyles('http://www.daiwei.org/global/css/animate.css');
 
 	//显示提示信息    toast
 	$.fn.toast = function(options){
@@ -15,7 +36,8 @@
 		    var box = '';   //消息元素
 		    var defaults = {
 		    	position:  			  "absolute", 				//不是body的话就absolute
-		    	animateStyle:  		  "fadeInUp",				//进入的动画
+		    	animateIn:  		  "fadeIn",					//进入的动画
+		    	animateOut: 		  "fadeOut",				//结束的动画
 				padding:              "10px 20px",              //padding
 				background:           "rgba(7,17,27,0.66)",     //背景色
 				borderRadius:         "6px",                    //圆角
@@ -47,9 +69,9 @@
 
 		    defaults.createMessage = function(){
 				if(opt.closePrev){
-					$('.cpt_toast').remove();
+					$('.cpt-toast').remove();
 				}
-				box = $("<span class='animated "+opt.animateStyle+" cpt_toast'>").css({
+				box = $("<span class='animated "+opt.animateIn+" cpt-toast'></span>").css({
 					"position":opt.position,
 					"padding":opt.padding,
 					"background":opt.background,
@@ -71,7 +93,7 @@
 		    	var isLowerIe9 = defaults.isLowerIe9();
 		    	if(!isLowerIe9){
 			    	t = setTimeout(function(){
-			    		box.removeClass(opt.animateStyle).addClass("fadeOutNoTransform").on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+			    		box.removeClass(opt.animateIn).addClass(opt.animateOut).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
 			    			box.remove();
 			    		});
 			    	},opt.duration);
@@ -88,14 +110,16 @@
 })(jQuery,window); 
 
 
-var showMessage = function(content,duration,isCenter,animateStyle){
-	var animateStyle = animateStyle || 'fadeInUp';
+var showMessage = function(content,duration,isCenter,animateIn,animateOut){
+	var animateIn = animateIn || 'fadeIn';
+	var animateOut = animateOut || 'fadeOut';
 	var content = content || '这是一个提示信息';
 	var duration = duration || '3000';
 	var isCenter = isCenter || false;
 	$('body').toast({
 		position:'fixed',
-		animateStyle:animateStyle,
+		animateIn:animateIn,
+		animateOut:animateOut,
 		content:content,
 		duration:duration,
 		isCenter:isCenter,

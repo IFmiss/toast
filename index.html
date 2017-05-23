@@ -3,25 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<title>滚动菜单兼容PC 移动端</title>
+	<link rel="shortcut icon" href="http://www.daiwei.org/index/images/logo/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
-	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/toast.css">
+	<!-- <link rel="stylesheet" href="http://www.daiwei.org/global/css/animate.css"> -->
+	<style>
+		.test{
+			margin: 50px auto;
+		}
+		.test div{
+			width: 300px;
+		}
+	</style>
 </head>
 <body style="margin: 0;width: 100%;min-height: 100%">
-	<div style="width: 100%;height: auto;margin-top: 30px">
-		<div onclick="showtoastFromDiv()" style="display: inline-block;background: #65D08E;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 10px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在元素垂直显示toast</div>
+	<div class="test" style="width: 300px;height: auto;margin-top: 30px">
+		<div class="toast_div" style="width:300px;height:300px;border:1px solid #aaa;margin-top: 20px;margin:0 auto"></div>
+		<div onclick="showtoastFromDiv()" style="display: inline-block;background: #65D08E;color:#fff;padding:10px 0;text-align: center;cursor: pointer;margin: 10px 0;border-radius: 4px;line-height: inherit;">在元素垂直显示toast</div>
 
-		<div onclick="showtoastFromDivbottom()" style="display: inline-block;background: #60DDE4;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 10px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在元素底部分显示toast</div>
+		<div onclick="showtoastFromDivbottom()" style="display: inline-block;background: #60DDE4;color:#fff;padding:10px 0;text-align: center;cursor: pointer;margin: 10px 0;border-radius: 4px;line-height: inherit;">在元素底部分显示toast</div>
 
-		<div onclick="showtoastFromDocument()" style="display: inline-block;background: #DC93F4;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 10px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在body中底部提示</div>
+		<div onclick="showtoastFromDocument()" style="display: inline-block;background: #DC93F4;color:#fff;padding:10px 0;text-align: center;cursor: pointer;margin: 10px 0;border-radius: 4px;line-height: inherit;">在body底部提示</div>
 
-		<div onclick="showtoastFromDocumentCenter()" style="display: inline-block;background: #F387A1;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 10px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">在body中中部提示</div>
+		<div onclick="showtoastFromDocumentCenter()" style="display: inline-block;background: #F387A1;color:#fff;padding:10px 0;text-align: center;cursor: pointer;margin: 10px 0;border-radius: 4px;line-height: inherit;">在body中中部提示</div>
 
-		<div onclick="toastbackground()" style="display: inline-block;background: #EFBF66;color:#fff;padding:5px 10px;text-align: center;cursor: pointer;margin: 10px 30px;border-radius: 4px;line-height: inherit;padding: 10px 20px">其他背景色toast</div>
+		<div onclick="toastbackground()" style="display: inline-block;background: #EFBF66;color:#fff;padding:10px 0;text-align: center;cursor: pointer;margin: 10px 0;border-radius: 4px;line-height: inherit;">其他背景色toast</div>
+
+		<div onclick="bounceInLeft()" style="display: inline-block;background: #5395D1;color:#fff;padding:10px 0;text-align: center;cursor: pointer;margin: 10px 0;border-radius: 4px;line-height: inherit;">bounceInLeft-hastrans</div>
+
+		<div onclick="bounceInUp()" style="display: inline-block;background: #CC4532;color:#fff;padding:10px 0;text-align: center;cursor: pointer;margin: 10px 0;border-radius: 4px;line-height: inherit;">bounceInUp-hastrans</div>
 	</div>
-
-
-	<div class="toast_div" style="width:50%;height:200px;border:1px solid #aaa;margin-top: 20px;margin-left: 30px"></div>
 </body>
 
 <script src="js/jquery.js"></script>
@@ -38,7 +49,9 @@
 		$('.toast_div').toast({
 			content:'这是默认的提示信息',
 			duration:3000,
-			isCenter:false
+			isCenter:false,
+			animateIn:'bounceIn-hastrans',
+			animateOut:'bounceOut-hastrans',
 		});
 	}
 
@@ -56,9 +69,34 @@
 			content:'这是默认的提示信息',
 			duration:3000,
 			isCenter:false,
-			background:'rgba(230,0,0,0.5)'
+			background:'rgba(230,0,0,0.5)',
+			animateIn:'bounceIn-hastrans',
+			animateOut:'bounceOut-hastrans',
 		});
 	}
 
+	function bounceInLeft(){
+		$('body').toast({
+			position:'fixed',
+			content:'这是默认的提示信息',
+			duration:3000,
+			isCenter:false,
+			background:'rgba(230,0,0,0.5)',
+			animateIn:'bounceInLeft-hastrans',
+			animateOut:'bounceOutRight-hastrans',
+		});
+	}
+
+	function bounceInUp(){
+		$('body').toast({
+			position:'fixed',
+			content:'这是默认的提示信息',
+			duration:3000,
+			isCenter:false,
+			background:'#4EA44E',
+			animateIn:'bounceInUp-hastrans',
+			animateOut:'bounceOutDown-hastrans',
+		});
+	}
 </script>
 </html>

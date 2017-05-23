@@ -69,7 +69,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 13, ../sass/toast.scss */
-.cpt_toast {
+.cpt-toast {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -87,28 +87,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transform: translate(-50%, -50%);
   transform: translate3d(-50%, -50%, 0);
   font-family: '微软雅黑','Microsoft Yahei';
-}
-
-@-webkit-keyframes fadeInNoTransform {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeInNoTransform {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* line 38, ../sass/toast.scss */
-.fadeInNoTransform {
-  -webkit-animation-name: fadeInNoTransform;
-  animation-name: fadeInNoTransform;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 @-webkit-keyframes fadeOutNoTransform {
@@ -127,168 +109,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     opacity: 0;
   }
 }
-/* line 51, ../sass/toast.scss */
+/* line 52, ../sass/toast.scss */
 .fadeOutNoTransform {
   -webkit-animation-name: fadeOutNoTransform;
   animation-name: fadeOutNoTransform;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-/* line 65, ../sass/toast.scss */
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-/* line 78, ../sass/toast.scss */
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, 20px, 0);
-    transform: translate3d(-50%, 20px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, 20px, 0);
-    -ms-transform: translate3d(-50%, 20px, 0);
-    transform: translate3d(-50%, 20px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-/* line 93, ../sass/toast.scss */
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-@-webkit-keyframes fadeOutDown {
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, 20px, 0);
-    transform: translate3d(-50%, 20px, 0);
-  }
-}
-@keyframes fadeOutDown {
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, 20px, 0);
-    -ms-transform: translate3d(-50%, 20px, 0);
-    transform: translate3d(-50%, 20px, 0);
-  }
-}
-/* line 107, ../sass/toast.scss */
-.fadeOutDown {
-  -webkit-animation-name: fadeOutDown;
-  animation-name: fadeOutDown;
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -40px, 0);
-    transform: translate3d(-50%, -40px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -40px, 0);
-    -ms-transform: translate3d(-50%, -40px, 0);
-    transform: translate3d(-50%, -40px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-/* line 122, ../sass/toast.scss */
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
 }
