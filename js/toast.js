@@ -42,6 +42,7 @@
 				background:           "rgba(7,17,27,0.66)",     //背景色
 				borderRadius:         "6px",                    //圆角
 				duration:             3000,                     //定时器时间
+				animateDuration: 	  500, 						//执行动画时间
 				fontSize:             14,                   	//字体大小
 				content:              "这是一个提示信息",       //提示内容
 				color:                "#fff",                   //文字颜色
@@ -85,6 +86,9 @@
 					"-webkit-transform":'translate3d(-50%,-50%,0)',
 			        "-moz-transform":'translate3d(-50%,-50%,0)',
 			        "transform":'translate3d(-50%,-50%,0)',
+			        '-webkit-animation-duration':opt.animateDuration/1000+'s',
+	    			'-moz-animation-duration':opt.animateDuration/1000+'s',
+	    			'animation-duration':opt.animateDuration/1000+'s',
 				}).html(opt.content).appendTo($this);
 				defaults.colseMessage();
 		    }
