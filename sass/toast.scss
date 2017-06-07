@@ -16,6 +16,8 @@
 	top:50%;
 	text-align: center;
     animation-duration: 0.3s;
+    max-width: 300px;
+    line-height: 20px;
 	@include inline-block;                   
 	@include transition(all 0.3s ease);
 	transform: translate(-50%,-50%);
@@ -39,17 +41,17 @@
 // .fadeInNoTransform{-webkit-animation-name:fadeInNoTransform;animation-name:fadeInNoTransform}
 
 //***************************************fadeOutNoTransform
-@-webkit-keyframes fadeOutNoTransform{
-	0%{opacity:1;}
-	100%{opacity:0;}
-}
+// @-webkit-keyframes fadeOutNoTransform{
+// 	0%{opacity:1;}
+// 	100%{opacity:0;}
+// }
 
-@keyframes fadeOutNoTransform{
-	0%{opacity:1;}
-	100%{opacity:0;}
-}
+// @keyframes fadeOutNoTransform{
+// 	0%{opacity:1;}
+// 	100%{opacity:0;}
+// }
 
-.fadeOutNoTransform{-webkit-animation-name:fadeOutNoTransform;animation-name:fadeOutNoTransform}
+// .fadeOutNoTransform{-webkit-animation-name:fadeOutNoTransform;animation-name:fadeOutNoTransform}
 
 
 // //***************************************fadeIn

@@ -75,6 +75,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   top: 50%;
   text-align: center;
   animation-duration: 0.3s;
+  max-width: 300px;
+  line-height: 20px;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -91,26 +93,4 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-}
-
-@-webkit-keyframes fadeOutNoTransform {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fadeOutNoTransform {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-/* line 52, ../sass/toast.scss */
-.fadeOutNoTransform {
-  -webkit-animation-name: fadeOutNoTransform;
-  animation-name: fadeOutNoTransform;
 }
