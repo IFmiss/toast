@@ -1,5 +1,8 @@
 # toast & showMessage
 这是一个简单的提示插件    适合移动端
+
+演示地址  http://daiwei.org/components/toast/
+
 ### toast
 * ### position:<br/>  			 
 如果toast创建的位置不是body的话就absolute
@@ -45,5 +48,3 @@ showMessage('这是提示信息',5000,false,'bounceIn-hastrans','bounceOut-hastr
 </pre>
 * ### 注意：'-hastrans'是我在animate.css的基础上加的,目的是当元素为绝对定位又想用translate居中时候,修改translate的值无效,故做了一些修改,之前的class也可以正常使用
 
-
-演示地址  http://daiwei.org/components/toast/
