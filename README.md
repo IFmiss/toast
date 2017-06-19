@@ -3,6 +3,10 @@
 
 演示地址  http://daiwei.org/components/toast/
 
+手机扫码预览<br>
+
+![](https://github.com/IFmiss/toast/blob/master/img/1497856732.png);
+
 ### toast
 * ### position:<br/>  			 
 如果toast创建的位置不是body的话就absolute
