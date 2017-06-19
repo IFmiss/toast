@@ -24,6 +24,7 @@
 	transform: translate3d(-50%,-50%,0);
 	font-family: '微软雅黑','Microsoft Yahei';
 	@include user-select(none);
+	word-wrap: break-word;
 }
 
 
